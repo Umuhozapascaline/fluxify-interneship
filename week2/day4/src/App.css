@@ -1,0 +1,370 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e293b, #334155);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Two Column Layout */
+.two-column-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .two-column-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .left-column {
+    flex: 1;
+  }
+  
+  .right-column {
+    flex: 1;
+    max-width: 420px;
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Form Card Styles */
+.form-card {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-card:hover {
+  box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid;
+}
+
+.registration-header {
+  background: #eef2ff;
+  border-bottom-color: #c7d2fe;
+}
+
+.registration-header h2 {
+  color: #3730a3;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.registration-header p {
+  color: #6366f1;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.preview-header {
+  background: #ecfdf5;
+  border-bottom-color: #a7f3d0;
+}
+
+.preview-header h2 {
+  color: #065f46;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.preview-header p {
+  color: #059669;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.card-body {
+  padding: 1.75rem;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  background: white;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error-input {
+  border-color: #f87171 !important;
+}
+
+.error-input:focus {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
+  font-weight: 500;
+}
+
+.success-message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  border-left: 4px solid #22c55e;
+}
+
+.helper-text {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+.registration-btn {
+  background: #4f46e5;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+}
+
+.registration-btn:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(79, 70, 229, 0.4);
+}
+
+.registration-btn:active {
+  transform: translateY(0);
+}
+
+/* Preview Card Styles */
+.preview-card {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+}
+
+.preview-header-gradient {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  padding: 1.25rem 1.5rem;
+}
+
+.preview-header-gradient h3 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.preview-header-gradient p {
+  color: #c7d2fe;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.preview-body {
+  padding: 1.5rem;
+}
+
+.preview-section {
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.preview-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.preview-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.preview-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1e293b;
+  word-break: break-word;
+}
+
+.preview-job {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+  word-break: break-word;
+}
+
+.preview-bio {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.preview-footer {
+  padding: 0.9rem 1.5rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.preview-note {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+/* Animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.error-input {
+  animation: shake 0.2s ease-in-out 0s 2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .app-container {
+    padding: 1rem;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .card-header {
+    padding: 1rem 1.25rem;
+  }
+  
+  .preview-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* Smooth transitions for preview card */
+.preview-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.2);
+}
